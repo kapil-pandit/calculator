@@ -14,6 +14,9 @@ function add(numbers) {
   // Split numbers using the delimiter(s)
   const numList = numString.split(delimiter).map(n => n.trim()).filter(n => n !== "");
 
+  // Convert to Integers
+  const values = numList.map(Number);
+
 
 
 
