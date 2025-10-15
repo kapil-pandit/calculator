@@ -11,6 +11,9 @@ function add(numbers) {
     numString = parts.slice(1).join("\n"); // rest of the string is numbers
     delimiter = new RegExp(delimiterPart); // support regex delimiters
   }
+  // Split numbers using the delimiter(s)
+  const numList = numString.split(delimiter).map(n => n.trim()).filter(n => n !== "");
+
 
 
 
