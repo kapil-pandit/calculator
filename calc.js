@@ -12,17 +12,7 @@ function add(numbers) {
     delimiter = new RegExp(delimiterPart); // support regex delimiters
   }
 
-  // Split numbers using the delimiter(s)
-  const numList = numString.split(delimiter).map(n => n.trim()).filter(n => n !== "");
 
-  // Convert to Integers
-  const values = numList.map(Number);
-
-  // Test for Negatives
-  const negatives = values.filter(n => n < 0);
-  if (negatives.length > 0) {
-    throw new Error(`negative numbers not allowed: ${negatives.join(", ")}`);
-  }
 
   // Calculate Addition
   const sum = values.reduce((acc, curr) => acc + curr, 0);
